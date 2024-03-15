@@ -1,2 +1,5 @@
-package hello.core.autowired;public class AutowiredTest {
+package hello.core.autowired;
+
+public class AutowiredTest {
+    
 }
