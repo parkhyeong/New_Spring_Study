@@ -77,9 +77,55 @@ public class JpaMain {
 //            Member member = new Member(200L, "member200");
 //            em.persist(member);
 
-            em.flush(); //데이터베이스에 쿼리가 즉시 나감
+//            em.flush(); //데이터베이스에 쿼리가 즉시 나감
 
-            System.out.println("==============================");
+//            System.out.println("==============================");
+//            Team team = new Team();
+//            team.setName("TeamA");
+//            em.persist(team);
+//
+//            Member member = new Member();
+//            member.setUsername("member1");
+////            member.changeTeam(team); //**
+//            em.persist(member);
+
+           // team.addMember(member); //**
+//            em.flush();
+//            em.clear();
+
+//            Member findMember = em.find(Member.class, member.getId());
+//
+//            List<Member> members = findMember.getTeam().getMembers();
+//
+//            for (Member m : members) {
+//                System.out.println("m.getUsername() = " + m.getUsername());
+//            }
+//            Team findTeam = findMember.getTeam();
+//            System.out.println("findTeam.getId() = " + findTeam.getId());
+
+//            Member member =new Member();
+//            member.setUsername("member1");
+//            em.persist(member);
+//
+//            Team team = new Team();
+//            team.setName("teamA");
+//            team.getMembers().add(member);
+//
+//            em.persist(team);
+//            Movie movie = new Movie();
+//            movie.setDirector("aaaa");
+//            movie.setActor("bbbb");
+//            movie.setName("바람과함께사라지다");
+//            movie.setPrice(10000);
+//
+//            em.persist(movie);
+//            em.flush();
+//            em.clear(); //1차캐시지움
+//
+//            Movie findMovie = em.find(Movie.class, movie.getId());
+//            System.out.println("findMovie = " + findMovie);
+
+
             tx.commit();
         }catch (Exception e) {
             tx.rollback();
