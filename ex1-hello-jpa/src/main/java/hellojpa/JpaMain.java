@@ -126,6 +126,16 @@ public class JpaMain {
 //            System.out.println("findMovie = " + findMovie);
 
 
+            Member member = new Member();
+            member.setUsername("hello");
+
+            em.persist(member);
+            em.flush();
+            em.clear();
+
+            Member findMember = em.getReference(Member.class, member.getId());
+            System.out.println("findMember = " + findMember.getId());
+
             tx.commit();
         }catch (Exception e) {
             tx.rollback();

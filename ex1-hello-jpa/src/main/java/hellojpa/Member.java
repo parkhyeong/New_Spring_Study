@@ -42,7 +42,7 @@ public class Member {
 //    @Column(name = "TEAM_ID")
 //    private Long teamId;
 
-    @ManyToOne //member입장에서 member는 N team은 1
+    @ManyToOne(fetch = FetchType.LAZY) //member입장에서 member는 N team은 1
     @JoinColumn(name="TEAM_ID", insertable = false, unique = false) //연관관계의 주인 읽기쓰기 가능
     private Team team;
 
